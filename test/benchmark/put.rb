@@ -1,4 +1,4 @@
-require_relative 'benchmark_init'
+require_relative "benchmark_init"
 
 defaults = Test::Benchmark::Defaults.build
 
@@ -30,7 +30,7 @@ result = Diagnostics::Sample.(defaults.cycles, warmup_cycles: defaults.warmup_cy
 end
 
 puts
-filename = Benchmark::RecordResult.('Put Benchmark', result)
+filename = Benchmark::RecordResult.("Put Benchmark", result)
 puts
 puts filename
 puts

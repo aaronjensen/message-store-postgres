@@ -101,9 +101,9 @@ module MessageStore
       end
 
       def self.message_data(record)
-        record['data'] = Get::Deserialize.data(record['data'])
-        record['metadata'] = Get::Deserialize.metadata(record['metadata'])
-        record['time'] = Get::Time.utc_coerced(record['time'])
+        record["data"] = Get::Deserialize.data(record["data"])
+        record["metadata"] = Get::Deserialize.metadata(record["metadata"])
+        record["time"] = Get::Time.utc_coerced(record["time"])
 
         MessageData::Read.build(record)
       end
@@ -126,7 +126,7 @@ module MessageStore
       end
 
       def self.error_message(pg_error)
-        pg_error.message.gsub('ERROR:', '').strip
+        pg_error.message.gsub("ERROR:", "").strip
       end
 
       def self.specialization(stream_name)

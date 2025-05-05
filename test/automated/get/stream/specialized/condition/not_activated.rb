@@ -1,4 +1,4 @@
-require_relative '../../../../automated_init'
+require_relative "../../../../automated_init"
 
 context "Get" do
   context "Category" do
@@ -7,7 +7,7 @@ context "Get" do
         context "Not Activated" do
           stream_name = Controls::StreamName.example
 
-          condition = 'some condition'
+          condition = "some condition"
 
           settings = Postgres::Settings.build
           session = Session.new

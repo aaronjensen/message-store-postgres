@@ -1,4 +1,4 @@
-require_relative '../../../automated_init'
+require_relative "../../../automated_init"
 
 context "Get" do
   context "Category" do
@@ -6,10 +6,10 @@ context "Get" do
       context "Specialization" do
         category = Controls::Category.example
         batch_size = 1
-        correlation = 'someCorrelation'
+        correlation = "someCorrelation"
         consumer_group_member = 0
         consumer_group_size = 1
-        condition = 'global_position >= 1'
+        condition = "global_position >= 1"
         session = Session.build
 
         get = Get.build(category, batch_size: batch_size, correlation: correlation, consumer_group_member: consumer_group_member, consumer_group_size: consumer_group_size, condition: condition, session: session)

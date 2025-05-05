@@ -1,19 +1,19 @@
 #!/usr/bin/env ruby
 
-ENV['CONSOLE_DEVICE'] ||= 'stdout'
-ENV['LOG_LEVEL'] ||= '_min'
+ENV["CONSOLE_DEVICE"] ||= "stdout"
+ENV["LOG_LEVEL"] ||= "_min"
 
 puts RUBY_DESCRIPTION
 
-require_relative '../init'
+require_relative "../init"
 
-require 'message_store/postgres/controls'
+require "message_store/postgres/controls"
 
 include MessageStore
 include MessageStore::Postgres
 
-instances = Integer(ENV['INSTANCES'] || 1)
-stream_name = ENV['STREAM_NAME']
+instances = Integer(ENV["INSTANCES"] || 1)
+stream_name = ENV["STREAM_NAME"]
 
 puts
 puts "Writing #{instances} messages"

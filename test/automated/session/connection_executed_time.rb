@@ -1,4 +1,4 @@
-require_relative '../automated_init'
+require_relative "../automated_init"
 
 context "Session" do
   context "Connection Executed Time" do
@@ -17,7 +17,7 @@ context "Session" do
       time = Controls::Time::Raw.example
       session.clock.now = time
 
-      session.execute(';')
+      session.execute(";")
 
       test "Executed time is set to the clock time" do
         assert(session.executed_time == time)

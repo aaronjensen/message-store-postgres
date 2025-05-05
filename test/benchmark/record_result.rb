@@ -35,8 +35,8 @@ module Benchmark
     end
 
     def filename
-      time = clock.iso8601.gsub(':','-')
-      directory = Pathname.new('test/benchmark/tmp')
+      time = clock.iso8601.gsub(":","-")
+      directory = Pathname.new("test/benchmark/tmp")
       filename = directory.join("#{name} - #{time} - #{RUBY_DESCRIPTION}.txt")
 
       filename

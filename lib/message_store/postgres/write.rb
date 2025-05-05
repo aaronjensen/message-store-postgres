@@ -11,7 +11,7 @@ module MessageStore
 
       def write(batch, stream_name, expected_version: nil)
         logger.trace(tag: :write) do
-          message_types = batch.map {|message_data| message_data.type }.uniq.join(', ')
+          message_types = batch.map {|message_data| message_data.type }.uniq.join(", ")
           "Writing batch (Stream Name: #{stream_name}, Types: #{message_types}, Number of Messages: #{batch.length}, Expected Version: #{expected_version.inspect})"
         end
 
@@ -31,7 +31,7 @@ module MessageStore
         end
 
         logger.debug(tag: :write) do
-          message_types = batch.map {|message_data| message_data.type }.uniq.join(', ')
+          message_types = batch.map {|message_data| message_data.type }.uniq.join(", ")
           "Wrote batch (Stream Name: #{stream_name}, Types: #{message_types}, Number of Messages: #{batch.length}, Expected Version: #{expected_version.inspect})"
         end
 

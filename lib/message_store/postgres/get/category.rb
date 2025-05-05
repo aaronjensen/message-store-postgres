@@ -31,7 +31,7 @@ module MessageStore
         end
 
         def parameters
-          '$1::varchar, $2::bigint, $3::bigint, $4::varchar, $5::bigint, $6::bigint, $7::varchar'
+          "$1::varchar, $2::bigint, $3::bigint, $4::varchar, $5::bigint, $6::bigint, $7::varchar"
         end
 
         def parameter_values(category, position)

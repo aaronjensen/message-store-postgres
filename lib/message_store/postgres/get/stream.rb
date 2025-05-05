@@ -30,7 +30,7 @@ module MessageStore
         end
 
         def parameters
-          '$1::varchar, $2::bigint, $3::bigint, $4::varchar'
+          "$1::varchar, $2::bigint, $3::bigint, $4::varchar"
         end
 
         def parameter_values(stream_name, position)

@@ -1,4 +1,4 @@
-require_relative '../automated_init'
+require_relative "../automated_init"
 
 context "Session" do
   context "Connection Executed Time Elapsed Milliseconds" do

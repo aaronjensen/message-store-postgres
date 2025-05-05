@@ -1,4 +1,4 @@
-require_relative '../automated_init'
+require_relative "../automated_init"
 
 context "Session" do
   test "On First Use" do
@@ -8,7 +8,7 @@ context "Session" do
 
     test "Connects" do
       refute_raises do
-        session.execute(';')
+        session.execute(";")
       end
     end
   end

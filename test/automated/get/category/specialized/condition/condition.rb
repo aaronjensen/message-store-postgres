@@ -1,4 +1,4 @@
-require_relative '../../../../automated_init'
+require_relative "../../../../automated_init"
 
 context "Get" do
   context "Category" do
@@ -8,12 +8,12 @@ context "Get" do
 
         stream_name, _ = Controls::Put.(instances: 3, category: category)
 
-        condition = 'position = 0 OR position = 2'
+        condition = "position = 0 OR position = 2"
 
         settings = Postgres::Settings.build
         session = Session.new
         settings.set(session)
-        session.options = '-c message_store.sql_condition=on'
+        session.options = "-c message_store.sql_condition=on"
 
         messages = Get::Category.(category, batch_size: 3, condition: condition, session: session)
 

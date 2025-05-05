@@ -3,7 +3,7 @@ module Test
     module Concurrency
       class Defaults
         def self.actors
-          Integer(ENV['ACTORS'] || 2)
+          Integer(ENV["ACTORS"] || 2)
         end
       end
     end

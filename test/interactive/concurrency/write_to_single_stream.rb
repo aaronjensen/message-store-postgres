@@ -1,6 +1,6 @@
-require_relative 'concurrency_init'
+require_relative "concurrency_init"
 
-require 'actor'
+require "actor"
 
 module Test
   module Interactive

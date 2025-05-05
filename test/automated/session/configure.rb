@@ -1,4 +1,4 @@
-require_relative '../automated_init'
+require_relative "../automated_init"
 
 context "Session" do
   context "Configure" do
@@ -28,7 +28,7 @@ context "Session" do
       Session.configure(receiver, settings: settings)
 
       test "Session is built from settings" do
-        assert(receiver.session.user == settings.get('user'))
+        assert(receiver.session.user == settings.get("user"))
       end
     end
 

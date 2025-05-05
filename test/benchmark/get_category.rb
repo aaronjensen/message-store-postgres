@@ -1,4 +1,4 @@
-require_relative 'benchmark_init'
+require_relative "benchmark_init"
 
 defaults = Test::Benchmark::Defaults.build
 
@@ -27,7 +27,7 @@ list.each do |entry|
 end
 
 puts "» constructing Get::Category"
-get = Get::Category.build('', batch_size: 1)
+get = Get::Category.build("", batch_size: 1)
 
 puts "» executing and sampling #{total_cycles} cycles"
 result = Diagnostics::Sample.(defaults.cycles, warmup_cycles: defaults.warmup_cycles, gc: defaults.gc) do |i|
@@ -41,7 +41,7 @@ result = Diagnostics::Sample.(defaults.cycles, warmup_cycles: defaults.warmup_cy
 end
 
 puts
-filename = Benchmark::RecordResult.('Get Category Benchmark', result)
+filename = Benchmark::RecordResult.("Get Category Benchmark", result)
 puts
 puts filename
 puts

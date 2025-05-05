@@ -165,7 +165,7 @@ module MessageStore
           s = settings.dup
 
           if s.has_key?(:password)
-            s[:password] = '*' * 8
+            s[:password] = "*" * 8
           end
 
           s

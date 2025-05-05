@@ -1,4 +1,4 @@
-require_relative '../../../automated_init'
+require_relative "../../../automated_init"
 
 context "Get" do
   context "Stream" do
@@ -9,7 +9,7 @@ context "Get" do
         batch_size = 1
         consumer_group_member = 0
         consumer_group_size = 1
-        condition = 'global_position >= 1'
+        condition = "global_position >= 1"
         session = Session.build
 
         get = Get.build(stream_name, batch_size: batch_size, condition: condition, session: session)

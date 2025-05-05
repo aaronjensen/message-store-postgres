@@ -1,4 +1,4 @@
-require_relative '../automated_init'
+require_relative "../automated_init"
 
 context "Read" do
   stream_name, _ = Controls::Put.(instances: 2)

@@ -21,24 +21,24 @@ module Test
       end
 
       def self.cycles
-        Integer(ENV['CYCLES'] || 100_000)
+        Integer(ENV["CYCLES"] || 100_000)
       end
 
       def self.warmup_cycles
-        Integer(ENV['WARMUP_CYCLES'] || 10)
+        Integer(ENV["WARMUP_CYCLES"] || 10)
       end
 
       def self.gc
-        ['on', 'true'].include?(ENV['GC']) ? true : false
+        ["on", "true"].include?(ENV["GC"]) ? true : false
       end
 
       def self.verbose
-        ['on', 'true'].include?(ENV['VERBOSE']) ? true : false
+        ["on", "true"].include?(ENV["VERBOSE"]) ? true : false
       end
 
       def self.stream_name
-##        ENV['STREAM_NAME'] || Controls::StreamName.example
-        ENV['STREAM_NAME']
+##        ENV["STREAM_NAME"] || Controls::StreamName.example
+        ENV["STREAM_NAME"]
       end
     end
   end
